@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SOC Students</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<body>
+    <h1 align="center"> Table </h1><br>
+    <div align="center">
+    <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name"><br>
+    <input type="button" value="Go" id="btn1">
+    </div>
+    <br>
+    <table align="center" class="table">
+    <thead>
+        <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+        <tr>
+            <td>180216</td>
+            <td>Darsh Sharma</td>
+            <td>1st</td>
+        </tr>
+        <tr>
+            <td>180886</td>
+            <td>Udhav Gupta</td>
+            <td>1st</td>
+        </tr>
+        <tr>
+            <td>180164</td>
+            <td>Avi</td>
+            <td>1st</td>
+        </tr>
+        <tr>
+            <td>180862</td>
+            <td>Vikrant Malik</td>
+            <td>1st</td>
+        </tr>
+    </tbody>
+    </table>
+        <script src="../JS/2_3.js">
+                $(document).ready(function(){
+                  $("#btn1").click(function() {
+                    var value = $("#myInput").val().toLowerCase();
+                       $("#myTable tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                 });
+              });
+        </script>
+</body>
+</html>
+
+   
+
